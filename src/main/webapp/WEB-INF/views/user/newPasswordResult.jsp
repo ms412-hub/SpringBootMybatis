@@ -1,0 +1,50 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: data8320-07
+  Date: 26. 7. 11.
+  Time: 오전 1:04
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="kopo.poly.util.CmmUtil" %>
+<%
+    String msg = CmmUtil.nvl((String) request.getAttribute("msg"));
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=msg%>></title>
+    <link rel="stylesheet" href="/css/table.css"/>
+    <script type="text/javascript" src="/js/jquery-4.0.0.min.js"></script>
+    <script type="text/javascript">
+
+        // HTML로딩이 완료되고, 실행됨
+        $(document).ready(function () {
+
+            // 로그인 화면 이동
+            $("#btnLogin").on("click", function () { // 버튼 클릭했을 때, 발생되는 이벤트 생성함(onclick 이벤트와 동일함)
+                location.href = "/user/login";
+            })
+        })
+    </script>
+</head>
+<body>
+<h2>비밀번호 재설정 결과</h2>
+<hr/>
+<br/>
+<form id="f">
+    <div class="divTable minimalistBlack">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCellv"><%=msg%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button id="btnLogin" type="button">로그인</button>
+    </div>
+</form>
+</body>
+</html>

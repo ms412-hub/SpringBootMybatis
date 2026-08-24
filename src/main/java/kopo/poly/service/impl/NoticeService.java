@@ -57,4 +57,6 @@ public class NoticeService implements INoticeService {
         noticeMapper.deleteNoticeInfo(pDTO);
 
     }
+
+
 }

@@ -71,7 +71,7 @@ public class UserInfoService implements IUserInfoService {
 
     @Override
     public int insertUserInfo(UserInfoDTO pDTO) throws Exception {
-        log.info("{}.insertUserInfo Start!",this.getClass().getName());
+        log.info("{}.insertUsers Start!",this.getClass().getName());
 
         int res;
 

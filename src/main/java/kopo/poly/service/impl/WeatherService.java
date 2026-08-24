@@ -7,8 +7,9 @@ import kopo.poly.service.IWeatherService;
 import kopo.poly.util.CmmUtil;
 import kopo.poly.util.DateUtil;
 import kopo.poly.util.NetworkUtil;
-import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashMap;
@@ -22,6 +23,10 @@ public class WeatherService implements IWeatherService {
 
     @Value("${weather.api.key}")
     private String apikey;
+
+    @Cacheable(cacheNames = "weather",
+            keyGenerator = "latLonKeyGen",
+            sync = true)
 
 
     @Override

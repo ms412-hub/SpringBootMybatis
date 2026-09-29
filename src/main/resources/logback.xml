@@ -15,10 +15,10 @@
             <charset>UTF-8</charset>
         </encoder>
 
-        <rolingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.dir}/applog.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
-        </rolingPolicy>
+        </rollingPolicy>
     </appender>
 
     <root level="INFO">

@@ -6,6 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="kopo.poly.dto.UserInfoDTO" %>
+<%@ page import="kopo.poly.util.CmmUtil" %>
+<%
+    String ssUserName = CmmUtil.nvl((String) session.getAttribute("SS_USER_NAME"));
+    String ssUserId = CmmUtil.nvl((String) session.getAttribute("SS_USER_ID"));
+%>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -25,11 +31,12 @@
     <div class="divTableRow">
         <div class="divTableCell">로그인된 사용자이름
         </div>
+        <div class="divTableCell"><%=ssUserName%>님이 로그인하였습니다.</div>
+    </div>
         <div class="divTableRow">
             <div class="divTableCell">로그인된 사용자아이디
             </div>
-            <div class="divTableCell"><%ssUserId%> 입니다</div>
-        </div>
+        <div class="divTableCell"><%=ssUserId%> 입니다</div>
     </div>
 </div>
 <div></div>

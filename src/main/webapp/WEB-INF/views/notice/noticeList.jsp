@@ -4,7 +4,7 @@
 <%@ page import="kopo.poly.dto.NoticeDTO" %>
 <%@ page import="kopo.poly.util.CmmUtil" %>
 <%
-    List<NoticeDTO> rList = (List<NoticeDTO>) request.getAttribute("rList");
+    List<NoticeDTO> rList = (List<NoticeDTO>) request.getAttribute("rList"); //자주 쓰는 변수들을 메모리에 올려둔다.
 %>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">

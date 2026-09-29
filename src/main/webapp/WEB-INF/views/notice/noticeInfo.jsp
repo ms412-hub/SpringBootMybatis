@@ -4,6 +4,8 @@
 <%@ page import="kopo.poly.util.CmmUtil" %>
 <%
     NoticeDTO rDTO = (NoticeDTO) request.getAttribute("rDTO");
+    /*String nSeq = CmmUtil.nvl(request.getParameter("nSeq"));
+    System.out.println("nSeq");*/
 %>
 <!DOCTYPE html>
 <html lang="en">
